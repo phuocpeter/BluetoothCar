@@ -84,10 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CCNPreferencesWindowController/CCNPreferencesWindowController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ORSSerialPort/ORSSerial.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CCNPreferencesWindowController/CCNPreferencesWindowController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ORSSerialPort/ORSSerial.framework"
 fi
