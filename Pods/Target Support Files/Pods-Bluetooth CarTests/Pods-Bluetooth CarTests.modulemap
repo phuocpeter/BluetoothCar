@@ -1,0 +1,6 @@
+framework module Pods_Bluetooth_CarTests {
+  umbrella header "Pods-Bluetooth CarTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

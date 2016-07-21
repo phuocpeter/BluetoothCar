@@ -1,0 +1,678 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2612531AB5A5612A08FD993F /* Pods_Bluetooth_CarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00ABA9ACB8DAD0ED15080ABF /* Pods_Bluetooth_CarUITests.framework */; };
+		26D7E8E5B35C0F119F7C74B5 /* Pods_Bluetooth_CarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7166A4D95B6E516D6F43453F /* Pods_Bluetooth_CarTests.framework */; };
+		305D52DCF2ACDCDB738362C7 /* Pods_Bluetooth_Car.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF33D6EB089A8353CC781829 /* Pods_Bluetooth_Car.framework */; };
+		986F6CD71D413C5200BFF2F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6CD61D413C5200BFF2F0 /* AppDelegate.swift */; };
+		986F6CD91D413C5200BFF2F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6CD81D413C5200BFF2F0 /* ViewController.swift */; };
+		986F6CDB1D413C5200BFF2F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 986F6CDA1D413C5200BFF2F0 /* Assets.xcassets */; };
+		986F6CDE1D413C5200BFF2F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986F6CDC1D413C5200BFF2F0 /* Main.storyboard */; };
+		986F6CE91D413C5200BFF2F0 /* Bluetooth_CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6CE81D413C5200BFF2F0 /* Bluetooth_CarTests.swift */; };
+		986F6CF41D413C5200BFF2F0 /* Bluetooth_CarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6CF31D413C5200BFF2F0 /* Bluetooth_CarUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		986F6CE51D413C5200BFF2F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 986F6CCB1D413C5200BFF2F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 986F6CD21D413C5200BFF2F0;
+			remoteInfo = "Bluetooth Car";
+		};
+		986F6CF01D413C5200BFF2F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 986F6CCB1D413C5200BFF2F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 986F6CD21D413C5200BFF2F0;
+			remoteInfo = "Bluetooth Car";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00ABA9ACB8DAD0ED15080ABF /* Pods_Bluetooth_CarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluetooth_CarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02926ED42D2B0611DE55113F /* Pods-Bluetooth CarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluetooth CarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluetooth CarTests/Pods-Bluetooth CarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4EBB6A81B09B27890B292E5C /* Pods-Bluetooth CarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluetooth CarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluetooth CarUITests/Pods-Bluetooth CarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7166A4D95B6E516D6F43453F /* Pods_Bluetooth_CarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluetooth_CarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		986F6CD31D413C5200BFF2F0 /* Bluetooth Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		986F6CD61D413C5200BFF2F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		986F6CD81D413C5200BFF2F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		986F6CDA1D413C5200BFF2F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		986F6CDD1D413C5200BFF2F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		986F6CDF1D413C5200BFF2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		986F6CE41D413C5200BFF2F0 /* Bluetooth CarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bluetooth CarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		986F6CE81D413C5200BFF2F0 /* Bluetooth_CarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth_CarTests.swift; sourceTree = "<group>"; };
+		986F6CEA1D413C5200BFF2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		986F6CEF1D413C5200BFF2F0 /* Bluetooth CarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bluetooth CarUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		986F6CF31D413C5200BFF2F0 /* Bluetooth_CarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth_CarUITests.swift; sourceTree = "<group>"; };
+		986F6CF51D413C5200BFF2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B539ADB4DFC281579BD7EF24 /* Pods-Bluetooth CarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluetooth CarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluetooth CarTests/Pods-Bluetooth CarTests.release.xcconfig"; sourceTree = "<group>"; };
+		BFF1930FDCB55731A9FA2621 /* Pods-Bluetooth Car.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluetooth Car.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluetooth Car/Pods-Bluetooth Car.release.xcconfig"; sourceTree = "<group>"; };
+		CF33D6EB089A8353CC781829 /* Pods_Bluetooth_Car.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluetooth_Car.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62656BA847BAAB9B5E0FC44 /* Pods-Bluetooth Car.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluetooth Car.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluetooth Car/Pods-Bluetooth Car.debug.xcconfig"; sourceTree = "<group>"; };
+		E992A8B393E798DE98D421BF /* Pods-Bluetooth CarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluetooth CarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluetooth CarUITests/Pods-Bluetooth CarUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		986F6CD01D413C5200BFF2F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305D52DCF2ACDCDB738362C7 /* Pods_Bluetooth_Car.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		986F6CE11D413C5200BFF2F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D7E8E5B35C0F119F7C74B5 /* Pods_Bluetooth_CarTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		986F6CEC1D413C5200BFF2F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2612531AB5A5612A08FD993F /* Pods_Bluetooth_CarUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		724E39C9CC44C7BEE4B95EAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E62656BA847BAAB9B5E0FC44 /* Pods-Bluetooth Car.debug.xcconfig */,
+				BFF1930FDCB55731A9FA2621 /* Pods-Bluetooth Car.release.xcconfig */,
+				02926ED42D2B0611DE55113F /* Pods-Bluetooth CarTests.debug.xcconfig */,
+				B539ADB4DFC281579BD7EF24 /* Pods-Bluetooth CarTests.release.xcconfig */,
+				4EBB6A81B09B27890B292E5C /* Pods-Bluetooth CarUITests.debug.xcconfig */,
+				E992A8B393E798DE98D421BF /* Pods-Bluetooth CarUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		986F6CCA1D413C5200BFF2F0 = {
+			isa = PBXGroup;
+			children = (
+				986F6CD51D413C5200BFF2F0 /* Bluetooth Car */,
+				986F6CE71D413C5200BFF2F0 /* Bluetooth CarTests */,
+				986F6CF21D413C5200BFF2F0 /* Bluetooth CarUITests */,
+				986F6CD41D413C5200BFF2F0 /* Products */,
+				724E39C9CC44C7BEE4B95EAB /* Pods */,
+				C7FC65668619A0F64B81B9A8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		986F6CD41D413C5200BFF2F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				986F6CD31D413C5200BFF2F0 /* Bluetooth Car.app */,
+				986F6CE41D413C5200BFF2F0 /* Bluetooth CarTests.xctest */,
+				986F6CEF1D413C5200BFF2F0 /* Bluetooth CarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		986F6CD51D413C5200BFF2F0 /* Bluetooth Car */ = {
+			isa = PBXGroup;
+			children = (
+				986F6CD61D413C5200BFF2F0 /* AppDelegate.swift */,
+				986F6CD81D413C5200BFF2F0 /* ViewController.swift */,
+				986F6CDA1D413C5200BFF2F0 /* Assets.xcassets */,
+				986F6CDC1D413C5200BFF2F0 /* Main.storyboard */,
+				986F6CDF1D413C5200BFF2F0 /* Info.plist */,
+			);
+			path = "Bluetooth Car";
+			sourceTree = "<group>";
+		};
+		986F6CE71D413C5200BFF2F0 /* Bluetooth CarTests */ = {
+			isa = PBXGroup;
+			children = (
+				986F6CE81D413C5200BFF2F0 /* Bluetooth_CarTests.swift */,
+				986F6CEA1D413C5200BFF2F0 /* Info.plist */,
+			);
+			path = "Bluetooth CarTests";
+			sourceTree = "<group>";
+		};
+		986F6CF21D413C5200BFF2F0 /* Bluetooth CarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				986F6CF31D413C5200BFF2F0 /* Bluetooth_CarUITests.swift */,
+				986F6CF51D413C5200BFF2F0 /* Info.plist */,
+			);
+			path = "Bluetooth CarUITests";
+			sourceTree = "<group>";
+		};
+		C7FC65668619A0F64B81B9A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF33D6EB089A8353CC781829 /* Pods_Bluetooth_Car.framework */,
+				7166A4D95B6E516D6F43453F /* Pods_Bluetooth_CarTests.framework */,
+				00ABA9ACB8DAD0ED15080ABF /* Pods_Bluetooth_CarUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		986F6CD21D413C5200BFF2F0 /* Bluetooth Car */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 986F6CF81D413C5200BFF2F0 /* Build configuration list for PBXNativeTarget "Bluetooth Car" */;
+			buildPhases = (
+				5B482FBE579B3E748D962885 /* 📦 Check Pods Manifest.lock */,
+				986F6CCF1D413C5200BFF2F0 /* Sources */,
+				986F6CD01D413C5200BFF2F0 /* Frameworks */,
+				986F6CD11D413C5200BFF2F0 /* Resources */,
+				FCF9E84DBAE0F51E15ADB703 /* 📦 Embed Pods Frameworks */,
+				3309E25F51B43AFDBC08BCF9 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bluetooth Car";
+			productName = "Bluetooth Car";
+			productReference = 986F6CD31D413C5200BFF2F0 /* Bluetooth Car.app */;
+			productType = "com.apple.product-type.application";
+		};
+		986F6CE31D413C5200BFF2F0 /* Bluetooth CarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 986F6CFB1D413C5200BFF2F0 /* Build configuration list for PBXNativeTarget "Bluetooth CarTests" */;
+			buildPhases = (
+				D0B0E456E18D9537FF778454 /* 📦 Check Pods Manifest.lock */,
+				986F6CE01D413C5200BFF2F0 /* Sources */,
+				986F6CE11D413C5200BFF2F0 /* Frameworks */,
+				986F6CE21D413C5200BFF2F0 /* Resources */,
+				CB96FBC592682F10058E3618 /* 📦 Embed Pods Frameworks */,
+				24E20DE2C568465548071B09 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				986F6CE61D413C5200BFF2F0 /* PBXTargetDependency */,
+			);
+			name = "Bluetooth CarTests";
+			productName = "Bluetooth CarTests";
+			productReference = 986F6CE41D413C5200BFF2F0 /* Bluetooth CarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		986F6CEE1D413C5200BFF2F0 /* Bluetooth CarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 986F6CFE1D413C5200BFF2F0 /* Build configuration list for PBXNativeTarget "Bluetooth CarUITests" */;
+			buildPhases = (
+				74BCB1969CD9AA23F670EF14 /* 📦 Check Pods Manifest.lock */,
+				986F6CEB1D413C5200BFF2F0 /* Sources */,
+				986F6CEC1D413C5200BFF2F0 /* Frameworks */,
+				986F6CED1D413C5200BFF2F0 /* Resources */,
+				7E8360E8ACDB1CCD7AF7ED7D /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				986F6CF11D413C5200BFF2F0 /* PBXTargetDependency */,
+			);
+			name = "Bluetooth CarUITests";
+			productName = "Bluetooth CarUITests";
+			productReference = 986F6CEF1D413C5200BFF2F0 /* Bluetooth CarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		986F6CCB1D413C5200BFF2F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Tran Thai Phuoc";
+				TargetAttributes = {
+					986F6CD21D413C5200BFF2F0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					986F6CE31D413C5200BFF2F0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 986F6CD21D413C5200BFF2F0;
+					};
+					986F6CEE1D413C5200BFF2F0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 986F6CD21D413C5200BFF2F0;
+					};
+				};
+			};
+			buildConfigurationList = 986F6CCE1D413C5200BFF2F0 /* Build configuration list for PBXProject "Bluetooth Car" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 986F6CCA1D413C5200BFF2F0;
+			productRefGroup = 986F6CD41D413C5200BFF2F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				986F6CD21D413C5200BFF2F0 /* Bluetooth Car */,
+				986F6CE31D413C5200BFF2F0 /* Bluetooth CarTests */,
+				986F6CEE1D413C5200BFF2F0 /* Bluetooth CarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		986F6CD11D413C5200BFF2F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				986F6CDB1D413C5200BFF2F0 /* Assets.xcassets in Resources */,
+				986F6CDE1D413C5200BFF2F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		986F6CE21D413C5200BFF2F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		986F6CED1D413C5200BFF2F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24E20DE2C568465548071B09 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bluetooth CarTests/Pods-Bluetooth CarTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3309E25F51B43AFDBC08BCF9 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bluetooth Car/Pods-Bluetooth Car-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B482FBE579B3E748D962885 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		74BCB1969CD9AA23F670EF14 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E8360E8ACDB1CCD7AF7ED7D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bluetooth CarUITests/Pods-Bluetooth CarUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB96FBC592682F10058E3618 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bluetooth CarTests/Pods-Bluetooth CarTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0B0E456E18D9537FF778454 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FCF9E84DBAE0F51E15ADB703 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bluetooth Car/Pods-Bluetooth Car-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		986F6CCF1D413C5200BFF2F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				986F6CD91D413C5200BFF2F0 /* ViewController.swift in Sources */,
+				986F6CD71D413C5200BFF2F0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		986F6CE01D413C5200BFF2F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				986F6CE91D413C5200BFF2F0 /* Bluetooth_CarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		986F6CEB1D413C5200BFF2F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				986F6CF41D413C5200BFF2F0 /* Bluetooth_CarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		986F6CE61D413C5200BFF2F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 986F6CD21D413C5200BFF2F0 /* Bluetooth Car */;
+			targetProxy = 986F6CE51D413C5200BFF2F0 /* PBXContainerItemProxy */;
+		};
+		986F6CF11D413C5200BFF2F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 986F6CD21D413C5200BFF2F0 /* Bluetooth Car */;
+			targetProxy = 986F6CF01D413C5200BFF2F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		986F6CDC1D413C5200BFF2F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				986F6CDD1D413C5200BFF2F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		986F6CF61D413C5200BFF2F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		986F6CF71D413C5200BFF2F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		986F6CF91D413C5200BFF2F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E62656BA847BAAB9B5E0FC44 /* Pods-Bluetooth Car.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Bluetooth Car/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ttp.Bluetooth-Car";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		986F6CFA1D413C5200BFF2F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF1930FDCB55731A9FA2621 /* Pods-Bluetooth Car.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Bluetooth Car/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ttp.Bluetooth-Car";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		986F6CFC1D413C5200BFF2F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02926ED42D2B0611DE55113F /* Pods-Bluetooth CarTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Bluetooth CarTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ttp.Bluetooth-CarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bluetooth Car.app/Contents/MacOS/Bluetooth Car";
+			};
+			name = Debug;
+		};
+		986F6CFD1D413C5200BFF2F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B539ADB4DFC281579BD7EF24 /* Pods-Bluetooth CarTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Bluetooth CarTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ttp.Bluetooth-CarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bluetooth Car.app/Contents/MacOS/Bluetooth Car";
+			};
+			name = Release;
+		};
+		986F6CFF1D413C5200BFF2F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EBB6A81B09B27890B292E5C /* Pods-Bluetooth CarUITests.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Bluetooth CarUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ttp.Bluetooth-CarUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Bluetooth Car";
+			};
+			name = Debug;
+		};
+		986F6D001D413C5200BFF2F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E992A8B393E798DE98D421BF /* Pods-Bluetooth CarUITests.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Bluetooth CarUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ttp.Bluetooth-CarUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Bluetooth Car";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		986F6CCE1D413C5200BFF2F0 /* Build configuration list for PBXProject "Bluetooth Car" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				986F6CF61D413C5200BFF2F0 /* Debug */,
+				986F6CF71D413C5200BFF2F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		986F6CF81D413C5200BFF2F0 /* Build configuration list for PBXNativeTarget "Bluetooth Car" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				986F6CF91D413C5200BFF2F0 /* Debug */,
+				986F6CFA1D413C5200BFF2F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		986F6CFB1D413C5200BFF2F0 /* Build configuration list for PBXNativeTarget "Bluetooth CarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				986F6CFC1D413C5200BFF2F0 /* Debug */,
+				986F6CFD1D413C5200BFF2F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		986F6CFE1D413C5200BFF2F0 /* Build configuration list for PBXNativeTarget "Bluetooth CarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				986F6CFF1D413C5200BFF2F0 /* Debug */,
+				986F6D001D413C5200BFF2F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 986F6CCB1D413C5200BFF2F0 /* Project object */;
+}
