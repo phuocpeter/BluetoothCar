@@ -7,13 +7,27 @@
 //
 
 import Cocoa
+import ORSSerial
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, ORSSerialPortDelegate {
 
+  let baudRates = [9600, 38400]
+  var port: ORSSerialPort?
+  var baudRate: Int = 0
+  
+  @IBOutlet weak var statusLabel: NSTextField!
+  @IBOutlet weak var baudRatePop: NSPopUpButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Do any additional setup after loading the view.
+    // Transform Int arr to String arr
+    let baudStrings = baudRates.map {
+      String($0)
+    }
+    
+    baudRate = baudRates[0]
+    baudRatePop.addItemsWithTitles(baudStrings)
   }
 
   override var representedObject: AnyObject? {
@@ -21,7 +35,49 @@ class ViewController: NSViewController {
     // Update the view, if already loaded.
     }
   }
+  
+  // MARK: - ORSSerialPort Delegate
 
+  func serialPortWasOpened(serialPort: ORSSerialPort) {
+    statusLabel.stringValue = "Connected"
+  }
+  
+  func serialPortWasClosed(serialPort: ORSSerialPort) {
+    statusLabel.stringValue = "Disconnected"
+  }
+  
+  func serialPortWasRemovedFromSystem(serialPort: ORSSerialPort) {
+    statusLabel.stringValue = "Removed"
+  }
+  
+  func serialPort(serialPort: ORSSerialPort, didEncounterError error: NSError) {
+    print(error.localizedDescription)
+    statusLabel.stringValue = error.localizedDescription
+  }
+  
+  // MARK: - IBAction Methods
+  
+  @IBAction func statusButtonPressed(sender: NSButton) {
+    if port == nil {
+      // Connect to port
+      port = ORSSerialPort(path: "/dev/cu.HC-01-DevB")
+      port?.delegate = self
+      port?.baudRate = baudRate
+      port?.open()
+      sender.title = "Disconnect"
+      return
+    }
+    // Close connection if already connected
+    port?.close()
+    sender.title = "Connect"
+  }
 
+  @IBAction func baudRateChanged(sender: NSPopUpButton) {
+    // Apply baud rate
+    let index = sender.indexOfSelectedItem
+    baudRate = baudRates[index]
+    port?.baudRate = baudRate
+  }
+  
 }
 

@@ -10,6 +10,7 @@
 		2612531AB5A5612A08FD993F /* Pods_Bluetooth_CarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00ABA9ACB8DAD0ED15080ABF /* Pods_Bluetooth_CarUITests.framework */; };
 		26D7E8E5B35C0F119F7C74B5 /* Pods_Bluetooth_CarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7166A4D95B6E516D6F43453F /* Pods_Bluetooth_CarTests.framework */; };
 		305D52DCF2ACDCDB738362C7 /* Pods_Bluetooth_Car.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF33D6EB089A8353CC781829 /* Pods_Bluetooth_Car.framework */; };
+		98322CC31D41425F004F2E4A /* Arduino in Resources */ = {isa = PBXBuildFile; fileRef = 98322CC21D41425F004F2E4A /* Arduino */; };
 		986F6CD71D413C5200BFF2F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6CD61D413C5200BFF2F0 /* AppDelegate.swift */; };
 		986F6CD91D413C5200BFF2F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6CD81D413C5200BFF2F0 /* ViewController.swift */; };
 		986F6CDB1D413C5200BFF2F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 986F6CDA1D413C5200BFF2F0 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		02926ED42D2B0611DE55113F /* Pods-Bluetooth CarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluetooth CarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluetooth CarTests/Pods-Bluetooth CarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4EBB6A81B09B27890B292E5C /* Pods-Bluetooth CarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluetooth CarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluetooth CarUITests/Pods-Bluetooth CarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7166A4D95B6E516D6F43453F /* Pods_Bluetooth_CarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluetooth_CarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98322CC21D41425F004F2E4A /* Arduino */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Arduino; sourceTree = "<group>"; };
 		986F6CD31D413C5200BFF2F0 /* Bluetooth Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		986F6CD61D413C5200BFF2F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		986F6CD81D413C5200BFF2F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		986F6CCA1D413C5200BFF2F0 = {
 			isa = PBXGroup;
 			children = (
+				98322CC21D41425F004F2E4A /* Arduino */,
 				986F6CD51D413C5200BFF2F0 /* Bluetooth Car */,
 				986F6CE71D413C5200BFF2F0 /* Bluetooth CarTests */,
 				986F6CF21D413C5200BFF2F0 /* Bluetooth CarUITests */,
@@ -274,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98322CC31D41425F004F2E4A /* Arduino in Resources */,
 				986F6CDB1D413C5200BFF2F0 /* Assets.xcassets in Resources */,
 				986F6CDE1D413C5200BFF2F0 /* Main.storyboard in Resources */,
 			);
