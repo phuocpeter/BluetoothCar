@@ -6,7 +6,8 @@ target 'Bluetooth Car' do
   use_frameworks!
 
   # Pods for Bluetooth Car
-  pod "ORSSerialPort"
+  pod 'ORSSerialPort'
+  pod 'CCNPreferencesWindowController'
 
   target 'Bluetooth CarTests' do
     inherit! :search_paths

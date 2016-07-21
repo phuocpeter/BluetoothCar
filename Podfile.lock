@@ -1,12 +1,15 @@
 PODS:
+  - CCNPreferencesWindowController (1.4.1)
   - ORSSerialPort (2.0.2)
 
 DEPENDENCIES:
+  - CCNPreferencesWindowController
   - ORSSerialPort
 
 SPEC CHECKSUMS:
+  CCNPreferencesWindowController: ae2d2deb3ec2133e7b61fa16e11d6be0e53868d5
   ORSSerialPort: 3fb0d2404b7e8b99c4f1aa7e7314d63030cd54c3
 
-PODFILE CHECKSUM: 981df235cae6c0a1d79adaabcfa57ee8594b7d2b
+PODFILE CHECKSUM: d391556d61f5f09f0b591c5259f0dc78e5047558
 
 COCOAPODS: 1.0.0
