@@ -7,8 +7,14 @@ SoftwareSerial softSerial(14, 15);
 #define IN2 8
 #define IN3 5
 #define IN4 4
+#define TRIG 9
+#define ECHO 10
+
+#define SAFE_DISTANCE 10
 
 int speed = 100;
+bool autopilot = false;
+bool backMode = false;
 
 void setup() {
   /* Set inputs */
@@ -18,6 +24,8 @@ void setup() {
   pinMode(IN2, OUTPUT);
   pinMode(IN3, OUTPUT);
   pinMode(IN4, OUTPUT);
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
 
   /* Serial */
   Serial.begin(9600);
@@ -31,7 +39,8 @@ void setup() {
 void loop() {
 
   if (Serial.available()) {
-    Serial.write(Serial.read());
+    //Serial.write(Serial.read());
+    processCommand(Serial.read());
     softSerial.write(Serial.read());
   }
 
@@ -39,7 +48,35 @@ void loop() {
     // Checks if the softSerial recevices data
     processCommand(softSerial.read());
   }
+  
+  if (autopilot) {
+    int distance = measureDistance();
+    Serial.println(distance);
+    softSerial.print(distance);
+    backMode = (distance <= 50);
+    if (backMode) {
+      processCommand('b');
+    } else {
+      processCommand('f');
+    }
+    delayMicroseconds(100);
+  }
 
+}
+
+/**
+ * Measures and returns the distance between an object in front.
+ */
+int measureDistance() {
+  unsigned long duration;
+  digitalWrite(TRIG, 0);
+  delayMicroseconds(2);
+  digitalWrite(TRIG, 1);
+  delayMicroseconds(5);
+  digitalWrite(TRIG, 0);
+  
+  duration = pulseIn(ECHO, HIGH);
+  return int(duration / 2 / 29.412);
 }
 
 /* Method: processCommand() */
@@ -50,7 +87,7 @@ void loop() {
  */
 void processCommand(char cmd) {
   switch (cmd) {
-    case 'f': //Fprward
+    case 'f': //Forward
       digitalWrite(IN1, LOW);  
       digitalWrite(IN2, HIGH);   
       
@@ -59,9 +96,10 @@ void processCommand(char cmd) {
 
       analogWrite(ENB, speed);  
       analogWrite(ENA, speed);
+      Serial.println("Forward");
       softSerial.print("Forward");
       break;
-    case 'b': //Fprward
+    case 'b': // Backward
       digitalWrite(IN1, HIGH);  
       digitalWrite(IN2, LOW);   
       
@@ -70,6 +108,7 @@ void processCommand(char cmd) {
 
       analogWrite(ENB, speed);  
       analogWrite(ENA, speed);
+      Serial.println("Backward");
       softSerial.print("Backward");
       break;
     case 's': // Stop
@@ -79,6 +118,10 @@ void processCommand(char cmd) {
       digitalWrite(IN4, LOW);  
       digitalWrite(IN3, LOW);   
       softSerial.print("Stop");
+      autopilot = false;
+      break;
+    case 'a': // Autopilot Mode
+      autopilot = true;
       break;
     default:
       break;
