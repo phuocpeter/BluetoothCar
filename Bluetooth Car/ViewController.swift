@@ -79,5 +79,27 @@ class ViewController: NSViewController, ORSSerialPortDelegate {
     port?.baudRate = baudRate
   }
   
+  // MARK: - Car Movements
+  
+  @IBAction func movePressed(sender: NSButton) {
+    let id = sender.identifier!
+    sendStringToPort(id)
+  }
+  
+  // MARK: - Helper Methods
+  
+  /**
+   * Converts string to NSData with UTF8 encoding.
+   * Then sends the data to port.
+   * - parameters:
+   *   - str: String to send to port
+   */
+  func sendStringToPort(str: String) {
+    let data = str.dataUsingEncoding(NSUTF8StringEncoding)
+    if (data != nil) {
+      port?.sendData(data!)
+    }
+  }
+  
 }
 
