@@ -11,11 +11,13 @@ import ORSSerial
 
 class ViewController: NSViewController, ORSSerialPortDelegate {
 
-  let baudRates = [9600, 38400]
+  let baudRates = [300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 74880, 115200, 230400, 2500000]
+  let ports = ORSSerialPortManager().availablePorts
   var port: ORSSerialPort?
   var baudRate: Int = 0
   
   @IBOutlet weak var statusLabel: NSTextField!
+  @IBOutlet weak var portsPop: NSPopUpButton!
   @IBOutlet weak var baudRatePop: NSPopUpButton!
   
   override func viewDidLoad() {
@@ -26,8 +28,15 @@ class ViewController: NSViewController, ORSSerialPortDelegate {
       String($0)
     }
     
-    baudRate = baudRates[0]
+    baudRate = baudRates[4]
     baudRatePop.addItemsWithTitles(baudStrings)
+    baudRatePop.selectItemAtIndex(4)
+    
+    let portStrings = ports.map {
+      String($0)
+    }
+    portsPop.addItemsWithTitles(portStrings)
+    portsPop.selectItemAtIndex(0)
   }
 
   override var representedObject: AnyObject? {
@@ -39,19 +48,22 @@ class ViewController: NSViewController, ORSSerialPortDelegate {
   // MARK: - ORSSerialPort Delegate
 
   func serialPortWasOpened(serialPort: ORSSerialPort) {
+    print("Connected to \(serialPort.name) with baud rate \(serialPort.baudRate)")
     statusLabel.stringValue = "Connected"
   }
   
   func serialPortWasClosed(serialPort: ORSSerialPort) {
+    print("Disconnected with \(serialPort.name)")
     statusLabel.stringValue = "Disconnected"
   }
   
   func serialPortWasRemovedFromSystem(serialPort: ORSSerialPort) {
+    print("Removed \(serialPort.name) from system")
     statusLabel.stringValue = "Removed"
   }
   
   func serialPort(serialPort: ORSSerialPort, didEncounterError error: NSError) {
-    print(error.localizedDescription)
+    print("Error: \(error.localizedDescription)")
     statusLabel.stringValue = error.localizedDescription
   }
   
@@ -60,15 +72,21 @@ class ViewController: NSViewController, ORSSerialPortDelegate {
   @IBAction func statusButtonPressed(sender: NSButton) {
     if port == nil {
       // Connect to port
-      port = ORSSerialPort(path: "/dev/cu.HC-01-DevB")
-      port?.delegate = self
-      port?.baudRate = baudRate
-      port?.open()
-      sender.title = "Disconnect"
+      let index = portsPop.indexOfSelectedItem
+      port = ports[index]
+      if let p = port {
+        p.delegate = self
+        p.baudRate = baudRate
+        p.open()
+        portsPop.enabled = false
+        sender.title = "Disconnect"
+      }
       return
     }
     // Close connection if already connected
     port?.close()
+    port = nil
+    portsPop.enabled = true
     sender.title = "Connect"
   }
 
@@ -98,6 +116,7 @@ class ViewController: NSViewController, ORSSerialPortDelegate {
     let data = str.dataUsingEncoding(NSUTF8StringEncoding)
     if (data != nil) {
       port?.sendData(data!)
+      print("Send '\(str)' with baud rate \(port?.baudRate)")
     }
   }
   
