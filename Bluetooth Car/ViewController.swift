@@ -17,6 +17,7 @@ class ViewController: NSViewController, ORSSerialPortDelegate {
   var baudRate: Int = 0
   
   @IBOutlet weak var statusLabel: NSTextField!
+  @IBOutlet weak var copyrightLabel: NSTextField!
   @IBOutlet weak var portsPop: NSPopUpButton!
   @IBOutlet weak var baudRatePop: NSPopUpButton!
   
@@ -27,7 +28,6 @@ class ViewController: NSViewController, ORSSerialPortDelegate {
     let baudStrings = baudRates.map {
       String($0)
     }
-    
     baudRate = baudRates[4]
     baudRatePop.addItemsWithTitles(baudStrings)
     baudRatePop.selectItemAtIndex(4)
@@ -37,6 +37,8 @@ class ViewController: NSViewController, ORSSerialPortDelegate {
     }
     portsPop.addItemsWithTitles(portStrings)
     portsPop.selectItemAtIndex(0)
+    
+    copyrightLabel.stringValue = "© 2016 Phuoc"
   }
 
   override var representedObject: AnyObject? {
@@ -109,8 +111,8 @@ class ViewController: NSViewController, ORSSerialPortDelegate {
   /**
    * Converts string to NSData with UTF8 encoding.
    * Then sends the data to port.
-   * - parameters:
-   *   - str: String to send to port
+   * - Parameters:
+   *   - str: The string to send to port
    */
   func sendStringToPort(str: String) {
     let data = str.dataUsingEncoding(NSUTF8StringEncoding)
