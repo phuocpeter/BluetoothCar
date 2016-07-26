@@ -25,7 +25,7 @@ Usage
   - Ultrasonic sensor HY-SRF05
 
 ![alt text](https://github.com/phuocpeter19/BluetoothCar/blob/master/BluetoothCarWires.png?raw=true "Instruction")
-- Open __xcworkspace__ file on a compatible Mac, compile through Xcode.
+- Download the [pre-compile app](https://github.com/phuocpeter19/BluetoothCar/releases/)
 - Choose the bluetooth port and then click connect.
 - Control the car with the UI buttons.
 
@@ -34,6 +34,7 @@ Compiling
 ---------
 
 - Required Xcode 7.0+ and macOS 10.10.
+- Open __xcworkspace__ file on a compatible Mac, compile through Xcode.
 
 Contribute
 ----------
