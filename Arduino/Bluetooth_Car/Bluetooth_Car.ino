@@ -55,7 +55,7 @@ void loop() {
     softSerial.print(distance);
     backMode = (distance <= 50);
     if (backMode) {
-      processCommand('b');
+      processCommand('l');
     } else {
       processCommand('f');
     }
@@ -120,6 +120,26 @@ void processCommand(char cmd) {
       softSerial.print("Stop");
       autopilot = false;
       break;
+    case 'r': // Right
+     digitalWrite(IN1, HIGH);  
+     digitalWrite(IN2, LOW);   
+      
+     digitalWrite(IN4, HIGH);  
+     digitalWrite(IN3, LOW); 
+
+     analogWrite(ENB, speed);  
+     analogWrite(ENA, speed);  
+     break;
+   case 'l': // Left
+     digitalWrite(IN1, LOW);  
+     digitalWrite(IN2, HIGH);   
+      
+     digitalWrite(IN4, LOW);  
+     digitalWrite(IN3, HIGH); 
+
+     analogWrite(ENB, speed);  
+     analogWrite(ENA, speed);  
+     break;
     case 'a': // Autopilot Mode
       autopilot = true;
       break;
