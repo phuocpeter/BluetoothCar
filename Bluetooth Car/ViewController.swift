@@ -68,7 +68,7 @@ class ViewController: NSViewController, ViewControllerDelegate, ORSSerialPortDel
     portsPop.addItemsWithTitles(portStrings)
     portsPop.selectItemAtIndex(0)
     
-    copyrightLabel.stringValue = "© 2016 Phuoc"
+    copyrightLabel.stringValue = "© 2016 Tran Thai Phuoc"
     hintLabel.stringValue = "Use W, A, S, D for directional movement, X to toggle Autopilot mode."
   }
 
