@@ -17,7 +17,7 @@
 		986F6CDE1D413C5200BFF2F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986F6CDC1D413C5200BFF2F0 /* Main.storyboard */; };
 		986F6CE91D413C5200BFF2F0 /* Bluetooth_CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6CE81D413C5200BFF2F0 /* Bluetooth_CarTests.swift */; };
 		986F6CF41D413C5200BFF2F0 /* Bluetooth_CarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6CF31D413C5200BFF2F0 /* Bluetooth_CarUITests.swift */; };
-		988701291D47C73D00CF3C8C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 988701281D47C73D00CF3C8C /* README.md */; };
+		988CBFB31D493463006B655C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CBFB21D493463006B655C /* MainWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +56,7 @@
 		986F6CF31D413C5200BFF2F0 /* Bluetooth_CarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth_CarUITests.swift; sourceTree = "<group>"; };
 		986F6CF51D413C5200BFF2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		988701281D47C73D00CF3C8C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		988CBFB21D493463006B655C /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		B539ADB4DFC281579BD7EF24 /* Pods-Bluetooth CarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluetooth CarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluetooth CarTests/Pods-Bluetooth CarTests.release.xcconfig"; sourceTree = "<group>"; };
 		BFF1930FDCB55731A9FA2621 /* Pods-Bluetooth Car.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluetooth Car.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluetooth Car/Pods-Bluetooth Car.release.xcconfig"; sourceTree = "<group>"; };
 		CF33D6EB089A8353CC781829 /* Pods_Bluetooth_Car.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluetooth_Car.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				986F6CD61D413C5200BFF2F0 /* AppDelegate.swift */,
+				988CBFB21D493463006B655C /* MainWindowController.swift */,
 				986F6CD81D413C5200BFF2F0 /* ViewController.swift */,
 				986F6CDA1D413C5200BFF2F0 /* Assets.xcassets */,
 				986F6CDC1D413C5200BFF2F0 /* Main.storyboard */,
@@ -430,7 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				988701291D47C73D00CF3C8C /* README.md in Sources */,
+				988CBFB31D493463006B655C /* MainWindowController.swift in Sources */,
 				986F6CD91D413C5200BFF2F0 /* ViewController.swift in Sources */,
 				986F6CD71D413C5200BFF2F0 /* AppDelegate.swift in Sources */,
 			);
