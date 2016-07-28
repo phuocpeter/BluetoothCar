@@ -12,7 +12,8 @@ Features
 - UI buttons for car movements _(forward, backward, lefward and rightward)_.
 - __Autopilot mode__: with ultrasonic sensor __HY-SRF05__, the car can autopilot and avoid obstacles in front.
 - __Voice mode__: control your bluetooth car with _your voice_! (macOS dictation required)
-  - _Command list_: forward, backward, stop, left, right, auto.
+  - _Command list_: forward, backward, stop, left, right and auto.
+- __Keyboard mode__: use W, A, S, D to control the direction of your car, X to toggle _Autopilot_ or V to toggle _Voice mode_. 
 - Since this is written in __Swift__, macOS 10.10 or later is required to run.
 
 Usage
