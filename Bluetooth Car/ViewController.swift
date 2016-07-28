@@ -85,18 +85,25 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
   // MARK: - NSSpeech Recognizer Delegate
   
   func speechRecognizer(sender: NSSpeechRecognizer, didRecognizeCommand command: String) {
+    print("Voice recognized: \(command)")
     switch command {
-    case "Listen to me":
-      sender.startListening()
+    case "Forward":
+      sendStringToPort("f")
       break
-    case "Stop listening to me":
-      sender.startListening()
+    case "Backward":
+      sendStringToPort("b")
       break
-    case "Listen to me":
-      sender.startListening()
+    case "Left":
+      sendStringToPort("l")
       break
-    case "Listen to me":
-      sender.startListening()
+    case "Right":
+      sendStringToPort("r")
+      break
+    case "Stop":
+      sendStringToPort("s")
+      break
+    case "Auto":
+      sendStringToPort("a")
       break
     default:
       break
@@ -264,15 +271,15 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
    */
   func setupSpeechRecognizer() {
     if let sr = speechRecog {
-      sr.commands = ["Listen to me",
-                     "Stop listening to me",
-                     "Forward",
+      sr.commands = ["Forward",
                      "Backward",
                      "Left",
                      "Right",
                      "Stop",
                      "Auto"
       ]
+      sr.delegate = self
+      sr.startListening()
     }
   }
   
