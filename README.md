@@ -10,7 +10,9 @@ Features
 
 - Connect and send commands to HC-05 with different baudrate.
 - UI buttons for car movements _(forward, backward, lefward and rightward)_.
-- __Autopilot mode__: with ultrasonic sensor __HY-SRF05__, the car can autopilot and avoid obstacles in front. However, this feature is not  perfect yet.
+- __Autopilot mode__: with ultrasonic sensor __HY-SRF05__, the car can autopilot and avoid obstacles in front.
+- __Voice mode__: control your bluetooth car with _your voice_! (macOS dictation required)
+  - _Command list_: forward, backward, stop, left, right, auto.
 - Since this is written in __Swift__, macOS 10.10 or later is required to run.
 
 Usage
@@ -26,6 +28,7 @@ Usage
 
 ![alt text](https://github.com/phuocpeter19/BluetoothCar/blob/master/BluetoothCarWires.png?raw=true "Instruction")
 - Download the [pre-compile app](https://github.com/phuocpeter19/BluetoothCar/releases/)
+- _Optional_: turn on dictation in System Perferences to use voice mode.
 - Choose the bluetooth port and then click connect.
 - Control the car with the UI buttons.
 
