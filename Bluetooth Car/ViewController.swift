@@ -27,7 +27,7 @@ protocol ViewControllerDelegate {
   func keyReleased(theEvent: NSEvent)
 }
 
-class ViewController: NSViewController, ViewControllerDelegate, ORSSerialPortDelegate {
+class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControllerDelegate, ORSSerialPortDelegate {
 
   /** Constant baud rates */
   let baudRates = [300, 12200, 2400, 4800, 9600, 19200, 38400, 57600, 74880, 115200, 230400, 2500000]
@@ -35,6 +35,8 @@ class ViewController: NSViewController, ViewControllerDelegate, ORSSerialPortDel
   /** All ports detected by the system */
   let ports = ORSSerialPortManager().availablePorts
   var port: ORSSerialPort?
+  
+  let speechRecog = NSSpeechRecognizer.init()
   
   /** Autopilot boolean mode */
   var autopilotMode = false
@@ -54,6 +56,8 @@ class ViewController: NSViewController, ViewControllerDelegate, ORSSerialPortDel
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    setupSpeechRecognizer();
+    
     // Transform Int arr to String arr
     let baudStrings = baudRates.map {
       String($0)
@@ -75,6 +79,27 @@ class ViewController: NSViewController, ViewControllerDelegate, ORSSerialPortDel
   override var representedObject: AnyObject? {
     didSet {
     // Update the view, if already loaded.
+    }
+  }
+  
+  // MARK: - NSSpeech Recognizer Delegate
+  
+  func speechRecognizer(sender: NSSpeechRecognizer, didRecognizeCommand command: String) {
+    switch command {
+    case "Listen to me":
+      sender.startListening()
+      break
+    case "Stop listening to me":
+      sender.startListening()
+      break
+    case "Listen to me":
+      sender.startListening()
+      break
+    case "Listen to me":
+      sender.startListening()
+      break
+    default:
+      break
     }
   }
   
@@ -232,6 +257,24 @@ class ViewController: NSViewController, ViewControllerDelegate, ORSSerialPortDel
   }
   
   // MARK: - Helper Methods
+  
+  /**
+   * Setups the recognizer and appends the commands
+   * to the list.
+   */
+  func setupSpeechRecognizer() {
+    if let sr = speechRecog {
+      sr.commands = ["Listen to me",
+                     "Stop listening to me",
+                     "Forward",
+                     "Backward",
+                     "Left",
+                     "Right",
+                     "Stop",
+                     "Auto"
+      ]
+    }
+  }
   
   /**
    * Converts string to NSData with UTF8 encoding.
