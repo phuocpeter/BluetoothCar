@@ -36,7 +36,11 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
   let ports = ORSSerialPortManager().availablePorts
   var port: ORSSerialPort?
   
+  /** The speech recognizer (maybe nil) */
   let speechRecog = NSSpeechRecognizer.init()
+  
+  /** Determines whether to listen or not */
+  var voiceMode = false
   
   /** Autopilot boolean mode */
   var autopilotMode = false
@@ -50,6 +54,7 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
   @IBOutlet weak var hintLabel: NSTextField!
   @IBOutlet weak var copyrightLabel: NSTextField!
   @IBOutlet weak var autopilotToggle: NSButton!
+  @IBOutlet weak var voiceCommandToggle: NSButton!
   @IBOutlet weak var portsPop: NSPopUpButton!
   @IBOutlet weak var baudRatePop: NSPopUpButton!
   
@@ -73,7 +78,7 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
     portsPop.selectItemAtIndex(0)
     
     copyrightLabel.stringValue = "© 2016 Tran Thai Phuoc"
-    hintLabel.stringValue = "Use W, A, S, D for directional movement, X to toggle Autopilot mode."
+    hintLabel.stringValue = "Use W, A, S, D for directional movement, X to toggle Autopilot mode\nand V to toggle voice mode."
   }
 
   override var representedObject: AnyObject? {
@@ -119,6 +124,9 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
     autopilotToggle.enabled = true
     autopilotToggle.state = NSOffState
     autopilotMode = false
+    voiceCommandToggle.enabled = true
+    voiceCommandToggle.state = NSOffState
+    voiceMode = false
   }
   
   func serialPortWasClosed(serialPort: ORSSerialPort) {
@@ -126,6 +134,7 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
     statusLabel.textColor = NSColor.blackColor()
     statusLabel.stringValue = "Disconnected"
     autopilotToggle.enabled = false
+    voiceCommandToggle.enabled = false
   }
   
   func serialPortWasRemovedFromSystem(serialPort: ORSSerialPort) {
@@ -172,6 +181,9 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
           sendStringToPort("a")
         }
         toggleAutoPilotMode()
+        break
+      case 0x09: // V
+        toggleVoiceMode()
         break
       default:
         break
@@ -243,31 +255,19 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
     if (id == "a") {
       id = toggleAutoPilotMode()
     }
-    sendStringToPort(id)
-  }
-  
-  /**
-   * Toggles the autopilot variable and the check button.
-   * - Returns: either "a" or "s" depends on the autopilot
-   * state.
-  */
-  func toggleAutoPilotMode() -> String {
-    if (autopilotMode) {
-      autopilotMode = !autopilotMode
-      autopilotToggle.state = NSOffState
-      return "s"
-    } else {
-      autopilotMode = !autopilotMode
-      autopilotToggle.state = NSOnState
-      return "a"
+    if (id == "voiceControlBtn") {
+      // Voice control toggled
+      toggleVoiceMode()
+      return
     }
+    sendStringToPort(id)
   }
   
   // MARK: - Helper Methods
   
   /**
    * Setups the recognizer and appends the commands
-   * to the list.
+   * to the list. Sets its delegate to self.
    */
   func setupSpeechRecognizer() {
     if let sr = speechRecog {
@@ -279,7 +279,38 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
                      "Auto"
       ]
       sr.delegate = self
-      sr.startListening()
+    }
+  }
+  
+  /**
+   * Toggles the voiceMode variable and the check button.
+   */
+  func toggleVoiceMode() {
+    if (voiceMode) {
+      voiceMode = !voiceMode
+      voiceCommandToggle.state = NSOffState
+      speechRecog?.stopListening()
+    } else {
+      voiceMode = !voiceMode
+      voiceCommandToggle.state = NSOnState
+      speechRecog?.startListening()
+    }
+  }
+  
+  /**
+   * Toggles the autopilot variable and the check button.
+   * - Returns: either "a" or "s" depends on the autopilot
+   * state.
+   */
+  func toggleAutoPilotMode() -> String {
+    if (autopilotMode) {
+      autopilotMode = !autopilotMode
+      autopilotToggle.state = NSOffState
+      return "s"
+    } else {
+      autopilotMode = !autopilotMode
+      autopilotToggle.state = NSOnState
+      return "a"
     }
   }
   

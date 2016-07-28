@@ -260,8 +260,19 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button identifier="voiceControlBtn" translatesAutoresizingMaskIntoConstraints="NO" id="Lgi-Ob-tIi">
+                                <rect key="frame" x="18" y="100" width="104" height="18"/>
+                                <buttonCell key="cell" type="check" title="Voice Control" bezelStyle="regularSquare" imagePosition="left" enabled="NO" inset="2" id="lmd-h4-sYy">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="movePressed:" target="XfG-lQ-9wD" id="6Bb-uo-8ay"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Lgi-Ob-tIi" firstAttribute="top" secondItem="Wn8-sz-dQ8" secondAttribute="bottom" constant="20" id="0zU-Ht-6VT"/>
                             <constraint firstItem="HFu-k2-4O7" firstAttribute="centerX" secondItem="T9B-EL-uWB" secondAttribute="centerX" id="2VS-lu-7Od"/>
                             <constraint firstItem="5Uf-7c-67Z" firstAttribute="top" secondItem="T9B-EL-uWB" secondAttribute="bottom" constant="8" symbolic="YES" id="34p-X5-g8g"/>
                             <constraint firstItem="8Mz-Et-V3H" firstAttribute="leading" secondItem="5Uf-7c-67Z" secondAttribute="leading" id="5Hu-l1-GvY"/>
@@ -279,6 +290,7 @@
                             <constraint firstItem="aMl-Gf-6RM" firstAttribute="leading" secondItem="Wn8-sz-dQ8" secondAttribute="trailing" constant="49" id="UoL-ei-yOS"/>
                             <constraint firstItem="HFu-k2-4O7" firstAttribute="top" secondItem="gpr-EJ-r4g" secondAttribute="bottom" constant="12" symbolic="YES" id="bWB-ok-M1y"/>
                             <constraint firstItem="Nl5-5O-uRw" firstAttribute="baseline" secondItem="1a9-3r-Byh" secondAttribute="baseline" id="bn2-WV-Zw6"/>
+                            <constraint firstItem="Lgi-Ob-tIi" firstAttribute="leading" secondItem="8Mz-Et-V3H" secondAttribute="leading" id="bvb-zv-ABU"/>
                             <constraint firstItem="8QA-3Q-Xiy" firstAttribute="leading" secondItem="8Mz-Et-V3H" secondAttribute="leading" id="cIv-Ji-jRE"/>
                             <constraint firstItem="Nl5-5O-uRw" firstAttribute="leading" secondItem="8QA-3Q-Xiy" secondAttribute="trailing" constant="8" symbolic="YES" id="dqj-Sp-hYZ"/>
                             <constraint firstItem="aMl-Gf-6RM" firstAttribute="baseline" secondItem="gpr-EJ-r4g" secondAttribute="baseline" id="g65-Qn-wfH"/>
@@ -302,6 +314,7 @@
                         <outlet property="hintLabel" destination="5Uf-7c-67Z" id="HLm-A9-Ebn"/>
                         <outlet property="portsPop" destination="L7c-e9-dbk" id="Qrd-um-Zdr"/>
                         <outlet property="statusLabel" destination="8QA-3Q-Xiy" id="3V4-ns-FFq"/>
+                        <outlet property="voiceCommandToggle" destination="Lgi-Ob-tIi" id="Ocb-JS-hSZ"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
