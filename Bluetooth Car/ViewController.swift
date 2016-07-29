@@ -124,7 +124,9 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
     autopilotToggle.enabled = true
     autopilotToggle.state = NSOffState
     autopilotMode = false
-    voiceCommandToggle.enabled = true
+    if (speechRecog != nil) {
+      voiceCommandToggle.enabled = true
+    }
     voiceCommandToggle.state = NSOffState
     voiceMode = false
   }
@@ -134,7 +136,12 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
     statusLabel.textColor = NSColor.blackColor()
     statusLabel.stringValue = "Disconnected"
     autopilotToggle.enabled = false
+    autopilotMode = false
+    autopilotToggle.state = NSOffState
+    voiceCommandToggle.state = NSOffState
+    voiceMode = false
     voiceCommandToggle.enabled = false
+    speechRecog?.stopListening()
   }
   
   func serialPortWasRemovedFromSystem(serialPort: ORSSerialPort) {
@@ -153,8 +160,8 @@ class ViewController: NSViewController, NSSpeechRecognizerDelegate, ViewControll
   
   /**
    * Processes and send the appropriate command
-   * based on the key pressed. Only W, A, S, D
-   * and X are available.
+   * based on the key pressed. Only W, A, S, D, X
+   * and V are available.
    * - Parameters:
    *   - theEvent: NSEvent with Keycode
   */
