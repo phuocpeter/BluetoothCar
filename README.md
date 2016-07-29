@@ -1,7 +1,7 @@
 BLUETOOTH CAR CONTROLLER
 ========================
 
-Bluetooth Car Controller is an macOS application written in Swift to controller Arduino bluetooth car with HC-05. This project also used __ORSSerialPort__.
+Bluetooth Car Controller is an macOS application written in Swift to controller Arduino bluetooth car with HC-05. This project used __ORSSerialPort__.
 
 ###### Personal _macOS_ project for educational and experience purpose.
 
@@ -31,7 +31,7 @@ Usage
 - Download the [pre-compile app](https://github.com/phuocpeter19/BluetoothCar/releases/)
 - _Optional_: turn on dictation in System Perferences to use voice mode.
 - Choose the bluetooth port and then click connect.
-- Control the car with the UI buttons.
+- Control the car with the UI buttons, voice or keyboard.
 
 
 Compiling
